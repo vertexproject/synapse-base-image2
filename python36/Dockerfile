@@ -5,9 +5,12 @@ MAINTAINER vEpiphyte <epiphyte@vertex.link>
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV PYTHONUNBUFFERED 1
 
+COPY requirements.txt /opt/reqs/build/requirements.txt
+
 # apt get clean / update / upgrade / install required packages / clean up
 # setup locales
 # Setup crontab from https://github.com/renskiy/cron-docker-image/blob/master/debian/Dockerfile
+# install python packages
 # install cron
 # making logging pipe
 # make pam_loginuid.so optional for cron
@@ -23,14 +26,11 @@ RUN set -ex \
     && locale-gen en_US.UTF-8 \
     && dpkg-reconfigure locales \
     && /usr/sbin/update-locale LANG=en_US.UTF-8 \
+    && pip install -r requirements.txt \
+    && rm requirements.txt
     && mkfifo --mode 0666 /var/log/cron.log \
     && sed --regexp-extended --in-place \
     's/^session\s+required\s+pam_loginuid.so$/session optional pam_loginuid.so/' \
     /etc/pam.d/cron
 
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8" LC_ALL="en_US.UTF-8"
-
-# Add our base requirements for python and install them
-RUN mkdir -p /opt/reqs/build/
-COPY requirements.txt /opt/reqs/build/requirements.txt
-RUN pip install -r /opt/reqs/build/requirements.txt
