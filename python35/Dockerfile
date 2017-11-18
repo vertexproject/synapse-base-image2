@@ -5,8 +5,7 @@ MAINTAINER vEpiphyte <epiphyte@vertex.link>
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt /opt/reqs/build/requirements.txt
-
+COPY requirements.txt requirements.txt
 # apt get clean / update / upgrade / install required packages / clean up
 # setup locales
 # Setup crontab from https://github.com/renskiy/cron-docker-image/blob/master/debian/Dockerfile
