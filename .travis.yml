@@ -1,9 +1,6 @@
 language: bash
 services: docker
 
-#install:
-#  - git clone -v https://github.com/vertexproject/synapse.git /tmp/synapse
-
 script:
   - docker build -f ./python36/Dockerfile ./python36 | tee build_log.txt
   - export IMAGE_ID=`grep "Successfully built" build_log.txt | grep -v "msgpack" | cut -f 3 -d " "`
