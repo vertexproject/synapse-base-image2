@@ -1,4 +1,5 @@
-# Synapse Base Images
+Synapse Base Images
+-------------------
 
 Dockerfiles for building docker images used in Synapse CI tests and the official Synapse Docker container.
 
@@ -14,8 +15,8 @@ Builds
 - Dockerhub https://hub.docker.com/r/vertexproject/synapse-docker-testimages/
 
 
-.. |travisci| image:: https://travis-ci.org/vertexproject/synapse-docker-testimages.svg?branch=master
-.. _travisci: https://travis-ci.org/vertexproject/synapse-docker-testimages
+.. |travisci| image:: https://travis-ci.org/vertexproject/ssynapse-base-image.svg?branch=master
+.. _travisci: https://travis-ci.org/vertexproject/synapse-base-image
 
-.. |pyupio| image:: https://pyup.io/repos/github/vertexproject/synapse-docker-testimages/shield.svg
-.. _pyupio: https://pyup.io/repos/github/vertexproject/synapse-docker-testimages/
+.. |pyupio| image:: https://pyup.io/repos/github/vertexproject/synapse-base-image/shield.svg
+.. _pyupio: https://pyup.io/repos/github/vertexproject/synapse-base-image/
