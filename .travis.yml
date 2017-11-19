@@ -2,7 +2,7 @@ language: bash
 services: docker
 
 script:
-  - docker build -f ./python36/Dockerfile ./python36 | tee build_log.txt
+  - docker build -f ./python36/Dockerfile . | tee build_log.txt
   - export IMAGE_ID=`grep "Successfully built" build_log.txt | grep -v "msgpack" | cut -f 3 -d " "`
   - docker run --rm $IMAGE_ID python -c "import msgpack; print(msgpack)"
   - docker run --rm $IMAGE_ID python -c "import tornado; print(tornado)"
