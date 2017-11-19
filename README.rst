@@ -15,7 +15,7 @@ Builds
 - Dockerhub https://hub.docker.com/r/vertexproject/synapse-docker-testimages/
 
 
-.. |travisci| image:: https://travis-ci.org/vertexproject/ssynapse-base-image.svg?branch=master
+.. |travisci| image:: https://travis-ci.org/vertexproject/synapse-base-image.svg?branch=master
 .. _travisci: https://travis-ci.org/vertexproject/synapse-base-image
 
 .. |pyupio| image:: https://pyup.io/repos/github/vertexproject/synapse-base-image/shield.svg
