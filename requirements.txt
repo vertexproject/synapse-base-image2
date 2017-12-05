@@ -4,7 +4,7 @@ pyOpenSSL==17.4.0
 msgpack-python==0.4.8
 xxhash==1.0.1
 lmdb==0.93
-regex==2017.11.09
+regex==2017.12.05
 # Delayed import
 psycopg2==2.7.3.2
 # Dynmod loaded by link
