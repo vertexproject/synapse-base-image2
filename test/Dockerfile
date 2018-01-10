@@ -1,4 +1,4 @@
-FROM {IMAGE_ID}
+FROM syntestimage:regular
 
 RUN mkdir -p /opt/test/
 

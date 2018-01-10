@@ -13,6 +13,12 @@ The following images are available for use from Docker, having been built on pyt
 - ``vertexproject/synapse-base-image:py35``
 - ``vertexproject/synapse-base-image:py36``
 
+In addition, the following debug image is available which is built from the vertexproject/pydebug:3.6-slim image. It
+is built as a debug build of python with GDB installed as well, for the purposes of doing live-inspection of python
+processes using docker.  For more information about it, see https://github.com/vertexproject/pydebug:
+
+- ``vertexproject/synapse-base-image:py36-debug``
+
 Builds
 ------
 
