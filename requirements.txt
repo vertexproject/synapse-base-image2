@@ -6,7 +6,7 @@ xxhash==1.0.1
 lmdb==0.93
 regex==2018.02.08
 # Delayed import
-psycopg2==2.7.3.2
+psycopg2==2.7.4
 # Dynmod loaded by link
 paramiko==2.4.0
 # Code style checks
