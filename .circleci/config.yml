@@ -4,8 +4,7 @@ jobs:
    machine: true
    steps:
      - checkout
-     # start proprietary DB using private Docker image
-     # with credentials stored in the UI
+
      - run:
         name: setup test image
         command: |
@@ -14,6 +13,7 @@ jobs:
           docker run --rm syntestimage:regular python -c "import tornado; print(tornado)"
           docker run --rm syntestimage:regular python -m pip freeze
           docker build -t syntestimage:test -f test/Dockerfile ./test
+
      - run:
         name: run test image
         command: |
