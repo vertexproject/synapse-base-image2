@@ -1,0 +1,22 @@
+version: 2
+jobs:
+ build:
+   machine: true
+   steps:
+     - checkout
+
+     - run:
+        name: setup test image
+        command: |
+          docker build -t syntestimage:regular -f ./python36/Dockerfile .
+          docker run --rm syntestimage:regular python -c "import msgpack; print(msgpack)"
+          docker run --rm syntestimage:regular python -c "import tornado; print(tornado)"
+          docker run --rm syntestimage:regular python -m pip freeze
+          docker build -t syntestimage:test -f test/Dockerfile ./test
+
+     - run:
+        name: run test image
+        command: |
+          docker-compose -f ./test/docker-compose.yml up -d
+          docker run --rm --network host -e "SYN_TEST_PG_DB=postgres:hehe@localhost:5432/syn_test" syntestimage:test 2>&1
+          docker-compose -f ./test/docker-compose.yml down

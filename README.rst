@@ -22,12 +22,12 @@ processes using docker.  For more information about it, see https://github.com/v
 Builds
 ------
 
-- Travis-Ci |travisci|_
+- Circle Ci |circleci|_
 - pyup.io |pyupio|_
 - Docker Store https://store.docker.com/community/images/vertexproject/synapse-base-image
 
-.. |travisci| image:: https://travis-ci.org/vertexproject/synapse-base-image.svg?branch=master
-.. _travisci: https://travis-ci.org/vertexproject/synapse-base-image
+.. |circleci| image:: https://circleci.com/gh/vertexproject/synapse-base-image/tree/master.svg?style=svg
+.. _circleci: https://circleci.com/gh/vertexproject/synapse-base-image/tree/master
 
 .. |pyupio| image:: https://pyup.io/repos/github/vertexproject/synapse-base-image/shield.svg
 .. _pyupio: https://pyup.io/repos/github/vertexproject/synapse-base-image/
