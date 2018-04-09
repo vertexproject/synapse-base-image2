@@ -3,7 +3,7 @@ tornado==4.5.3
 pyOpenSSL==17.5.0
 msgpack==0.5.1 # pyup: ignore
 xxhash==1.0.1
-lmdb==0.93
+lmdb==0.94
 regex==2018.02.21
 # Delayed import
 psycopg2==2.7.4
