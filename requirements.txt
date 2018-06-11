@@ -4,7 +4,7 @@ pyOpenSSL==18.0.0
 msgpack==0.5.1 # pyup: ignore
 xxhash==1.0.1
 lmdb==0.94
-regex==2018.06.06
+regex==2018.06.09
 PyYAML==3.12
 # Delayed import
 psycopg2==2.7.4
