@@ -8,7 +8,7 @@ jobs:
      - run:
         name: setup test image
         command: |
-          docker build -t syntestimage:regular -f ./python36/Dockerfile .
+          docker build -t syntestimage:regular -f ./python37/Dockerfile .
           docker run --rm syntestimage:regular python -c "import msgpack; print(msgpack)"
           docker run --rm syntestimage:regular python -c "import tornado; print(tornado)"
           docker run --rm syntestimage:regular python -m pip freeze
