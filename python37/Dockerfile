@@ -1,4 +1,4 @@
-FROM python:3.7-rc-slim
+FROM python:3.7-slim
 
 MAINTAINER vEpiphyte <epiphyte@vertex.link>
 
