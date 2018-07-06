@@ -1,22 +1,39 @@
 version: 2
-jobs:
- build:
-   machine: true
-   steps:
-     - checkout
 
-     - run:
-        name: setup test image
+docker_test_steps:  &docker_test_steps
+  steps:
+    - checkout
+    - run:
+        name: setup test images and run tests
         command: |
-          docker build -t syntestimage:regular -f ./python36/Dockerfile .
-          docker run --rm syntestimage:regular python -c "import msgpack; print(msgpack)"
-          docker run --rm syntestimage:regular python -c "import tornado; print(tornado)"
-          docker run --rm syntestimage:regular python -m pip freeze
-          docker build -t syntestimage:test -f test/Dockerfile ./test
-
-     - run:
-        name: run test image
-        command: |
+          docker build -t syntestimage:"$DIRNAME"-regular -f ./"$DIRNAME"/Dockerfile .
+          docker run --rm syntestimage:"$DIRNAME"-regular python -c "import msgpack; print(msgpack)"
+          docker run --rm syntestimage:"$DIRNAME"-regular python -c "import tornado; print(tornado)"
+          docker run --rm syntestimage:"$DIRNAME"-regular python -m pip freeze
+          printf "FROM syntestimage:"$DIRNAME"-regular\n\n" > test/Dockerfile_"$DIRNAME"
+          cat test/Dockerfile >> test/Dockerfile_"$DIRNAME"
+          docker build -t syntestimage:"$DIRNAME"-test -f test/Dockerfile_"$DIRNAME" ./test
           docker-compose -f ./test/docker-compose.yml up -d
-          docker run --rm --network host -e "SYN_TEST_PG_DB=postgres:hehe@localhost:5432/syn_test" syntestimage:test 2>&1
+          docker run --rm --network host -e "SYN_TEST_PG_DB=postgres:hehe@localhost:5432/syn_test" syntestimage:"$DIRNAME"-test 2>&1
           docker-compose -f ./test/docker-compose.yml down
+
+jobs:
+
+  test_36:
+    machine: true
+    environment:
+      DIRNAME: python36
+    <<: *docker_test_steps
+
+  test_37:
+    machine: true
+    environment:
+      DIRNAME: python37
+    <<: *docker_test_steps
+
+workflows:
+  version: 2
+  run_tests:
+    jobs:
+      - test_36
+      - test_37
