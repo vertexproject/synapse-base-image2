@@ -1,5 +1,3 @@
-FROM syntestimage:regular
-
 RUN mkdir -p /opt/test/
 
 COPY synapse_test.sh /opt/test/synapse_test.sh
