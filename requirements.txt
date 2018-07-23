@@ -1,5 +1,5 @@
 # Required packages for synapse
-tornado==4.5.3
+tornado==5.1
 pyOpenSSL==18.0.0
 msgpack==0.5.1 # pyup: ignore
 xxhash==1.1.0
