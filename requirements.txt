@@ -13,6 +13,6 @@ coverage==4.5.1
 codecov==2.0.15
 pytest==3.7.2
 pytest-cov==2.5.1
-pytest-xdist==1.22.2
+pytest-xdist==1.23.0
 # Support packages for other users
 wheel==0.31.1
