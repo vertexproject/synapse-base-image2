@@ -1,5 +1,5 @@
 # Required packages for synapse
-tornado==5.1
+tornado==5.1.1
 pyOpenSSL==18.0.0
 msgpack==0.5.1 # pyup: ignore
 xxhash==1.2.0
@@ -15,4 +15,4 @@ pytest==3.8.0
 pytest-cov==2.6.0
 pytest-xdist==1.23.0
 # Support packages for other users
-wheel==0.31.1
+wheel==0.32.1
