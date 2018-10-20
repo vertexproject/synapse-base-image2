@@ -1,18 +1,18 @@
 # Required packages for synapse
-tornado==5.1
+tornado==5.1.1
 pyOpenSSL==18.0.0
 msgpack==0.5.1 # pyup: ignore
 xxhash==1.2.0
 lmdb==0.94
-regex==2018.08.17
+regex==2018.08.29
 PyYAML==3.13
 # Code style checks
 pycodestyle==2.4.0
 # Test related packages
 coverage==4.5.1
 codecov==2.0.15
-pytest==3.8.0
+pytest==3.9.1
 pytest-cov==2.6.0
 pytest-xdist==1.23.2
 # Support packages for other users
-wheel==0.31.1
+wheel==0.32.1
