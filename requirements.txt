@@ -4,7 +4,7 @@ pyOpenSSL==18.0.0
 msgpack==0.5.1 # pyup: ignore
 xxhash==1.2.0
 lmdb==0.94
-regex==2018.08.29
+regex==2018.11.03
 PyYAML==3.13
 # Code style checks
 pycodestyle==2.4.0
