@@ -17,12 +17,6 @@ docker_test_steps:  &docker_test_steps
 
 jobs:
 
-  test_36:
-    machine: true
-    environment:
-      DIRNAME: python36
-    <<: *docker_test_steps
-
   test_37:
     machine: true
     environment:
@@ -33,5 +27,4 @@ workflows:
   version: 2
   run_tests:
     jobs:
-      - test_36
       - test_37
