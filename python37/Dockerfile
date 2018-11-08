@@ -25,6 +25,7 @@ RUN set -ex \
     && locale-gen en_US.UTF-8 \
     && dpkg-reconfigure locales \
     && /usr/sbin/update-locale LANG=en_US.UTF-8 \
+    && mkdir -p /var/log/supervisor \
     && pip install -r requirements.txt \
     && rm requirements.txt \
     && mkfifo --mode 0666 /var/log/cron.log \
