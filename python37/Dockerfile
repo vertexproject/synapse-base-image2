@@ -18,13 +18,14 @@ RUN set -ex \
     && apt-get clean \
     && apt-get update \
     && apt-get -y upgrade \
-    && apt-get install -y build-essential libffi-dev libssl-dev libpq-dev locales cron git\
+    && apt-get install -y build-essential libffi-dev libssl-dev libpq-dev locales cron git tree procps net-tools supervisor\
     && apt-get clean && apt-get purge \
     && rm -rf /var/lib/apt/lists/* \
     && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && locale-gen en_US.UTF-8 \
     && dpkg-reconfigure locales \
     && /usr/sbin/update-locale LANG=en_US.UTF-8 \
+    && mkdir -p /var/log/supervisor \
     && pip install -r requirements.txt \
     && rm requirements.txt \
     && mkfifo --mode 0666 /var/log/cron.log \
