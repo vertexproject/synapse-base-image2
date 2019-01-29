@@ -8,7 +8,7 @@ lmdb==0.94
 regex==2018.11.22
 PyYAML==3.13
 # Code style checks
-pycodestyle==2.4.0
+pycodestyle==2.5.0
 # Test related packages
 coverage==4.5.2
 codecov==2.0.15
