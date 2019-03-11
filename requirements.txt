@@ -10,7 +10,7 @@ PyYAML==4.2b4
 # Code style checks
 pycodestyle==2.5.0
 # Test related packages
-coverage==4.5.2
+coverage==4.5.3
 codecov==2.0.15
 pytest==4.3.0
 pytest-cov==2.6.1
