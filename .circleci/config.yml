@@ -13,7 +13,7 @@ docker_test_steps:  &docker_test_steps
           printf "FROM syntestimage:"$DIRNAME"-regular\n\n" > test/Dockerfile_"$DIRNAME"
           cat test/Dockerfile >> test/Dockerfile_"$DIRNAME"
           docker build -t syntestimage:"$DIRNAME"-test -f test/Dockerfile_"$DIRNAME" ./test
-          docker run --rm --network host -e "SYN_TEST_PG_DB=postgres:hehe@localhost:5432/syn_test" syntestimage:"$DIRNAME"-test 2>&1
+          docker run --rm --network host -e "SYN_LOG_LEVEL=DEBUG" syntestimage:"$DIRNAME"-test 2>&1
 
 jobs:
 
