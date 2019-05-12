@@ -13,7 +13,7 @@ pycodestyle==2.5.0
 # Test related packages
 coverage==4.5.2
 codecov==2.0.15
-pytest==4.4.0
+pytest==4.5.0
 pytest-cov==2.6.1
 pytest-xdist==1.24.1
 # Support packages for other users
