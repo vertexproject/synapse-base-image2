@@ -5,16 +5,18 @@ pyOpenSSL==19.0.0
 msgpack==0.6.1
 xxhash==1.3.0
 lmdb==0.94
-regex==2019.02.21
+regex==2019.04.14
 PyYAML==5.1
 prompt-toolkit==2.0.9
+Pygments==2.3.1
+lark-parser==0.7.1
 # Code style checks
 pycodestyle==2.5.0
 # Test related packages
 coverage==4.5.2
 codecov==2.0.15
-pytest==4.4.0
-pytest-cov==2.6.1
+pytest==4.5.0
+pytest-cov==2.7.1
 pytest-xdist==1.24.1
 # Support packages for other users
 wheel==0.33.4
