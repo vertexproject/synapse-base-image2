@@ -14,7 +14,7 @@ lark-parser==0.7.5
 pycodestyle==2.5.0
 # Test related packages
 coverage==4.5.4
-codecov==2.0.15
+codecov==2.0.16
 pytest==4.6.3
 pytest-cov==2.7.1
 pytest-xdist==1.24.1
