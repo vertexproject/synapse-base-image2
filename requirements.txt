@@ -3,7 +3,7 @@ tornado==6.0.3
 aiohttp==3.5.4
 pyOpenSSL==19.0.0
 msgpack==0.6.1
-xxhash==1.4.1
+xxhash==1.4.3
 lmdb==0.97
 regex==2019.08.19
 PyYAML==5.1.2
